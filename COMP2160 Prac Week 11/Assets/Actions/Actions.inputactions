@@ -1,0 +1,113 @@
+{
+    "name": "Actions",
+    "maps": [
+        {
+            "name": "mouse",
+            "id": "d64786fe-da07-4ccb-a905-363f9ba31466",
+            "actions": [
+                {
+                    "name": "position",
+                    "type": "Value",
+                    "id": "2be0bff6-e570-4d71-b0a8-7adabf26b60d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "select",
+                    "type": "Button",
+                    "id": "8bf9dd9a-f831-4f4e-ae80-e4b757e876cd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "delta",
+                    "type": "Value",
+                    "id": "9141cb6e-0ccf-47d8-bfa5-c32b5b9d5394",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f1b6a23c-8348-4f9a-abe8-d855a3c025b8",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "841aedd0-d9c7-4816-ac9f-0956fcecadea",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "796e2692-7d31-4684-863f-199f130def13",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "delta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "camera",
+            "id": "ce01b343-c6bd-4e6c-9b99-56748913acb0",
+            "actions": [
+                {
+                    "name": "zoom",
+                    "type": "Value",
+                    "id": "6cd278c2-5ebf-4d19-b7ed-cb8fb99c28f9",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0286e047-03df-4272-b306-62eb0a25ca48",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "47b48ee4-fa7e-4c70-a94a-29daf979f84e",
+                    "path": "<Mouse>/scroll/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
