@@ -11,6 +11,8 @@ Today's task combines two related ideas – mouse input and camera coordinate f
 
 The template project already implements the marble movement and a basic UI Manager to select a target position for it to move to. Familiarise yourself with this code.
 
+![A screenshot from the game](Images/Screenshot.png)
+
 ## Step 1 - Complete UIManager.MoveCrosshair
 
 The first task is to make the crosshair follow the mouse cursor, in the method `UIManager.MoveCrosshair`. 
@@ -63,11 +65,13 @@ Suppose we want to play the game in an tilted view rather than a top-down view.
 
 We want to map a screen position to a point on a plane that is at an angle to the camera. We can do this easily using raycasting, as shown in the diagram below. 
 
+![Illustration of how the ScreenPointToRay method works](Images/ScreenPointToRay.png)
+
 * The camera is an position **C** and the mouse cursor is at position **M**. We can use the function [`Camera.ScreenPointToRay`](https://docs.unity3d.com/ScriptReference/Camera.ScreenPointToRay.html) to calculate a ray from **C** that passes through **M** (in world coordinates).
 
-* The board is represented by a plane at position **P**. The rotation of the plane is given by the *normal* vector **n** which is at right angles to the plane. We can represent this using the [`Plane`](https://docs.unity3d.com/ScriptReference/Plane.html) class.
+* The board is represented by a plane at position **B**. The rotation of the plane is given by the *normal* vector **n** which is at right angles to the plane. We can represent this using the [`Plane`](https://docs.unity3d.com/ScriptReference/Plane.html) class.
 
-* We want to put the crosshair at the point **Q** where the ray hits the plane. This can be calculated using the [`Plane.Raycast`](https://docs.unity3d.com/ScriptReference/Plane.Raycast.html) and [`Ray.GetPoint`](https://docs.unity3d.com/ScriptReference/Ray.GetPoint.html) methods. 
+* We want to put the crosshair at the point **P** where the ray hits the plane. This can be calculated using the [`Plane.Raycast`](https://docs.unity3d.com/ScriptReference/Plane.Raycast.html) and [`Ray.GetPoint`](https://docs.unity3d.com/ScriptReference/Ray.GetPoint.html) methods. 
 
 2. Use these methods to implement a crosshair that works in the isometric view. Test this in all four of your QA scenes, with different zoom levels.
 
@@ -92,6 +96,8 @@ We can do this by using the defined `mouse.delta` action which is provided the c
 ## Step 7 - Less strict tracking
 
 Suppose we want to allow the target some freedom of movement while keeping it roughly in the centre of the screen. Let's say we will allow the target to stay in a box 50% of the width and height of the screen, as shown in the diagram below.
+
+![Illustration of the less strict camera tracking](Images/Tracking.png)
 
 1. Add Rect parameter to the Follower class to set this boundary. The coordinates should be given in **viewport** coordinates (as proportions of screen width and height) rather than in screen coordinates.
 
