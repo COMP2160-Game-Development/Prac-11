@@ -57,6 +57,10 @@ A common trick is to have an invisible 'follower' object that is the focus of th
 5. **Debugging**: Add a Gizmo that draws a wire sphere at the follower location.
 6. **QA**: Test that your crosshair movement still works when the camera moves.
 
+## To receive half-marks for today, show your demonstrator:
+* Your camera zoom code.
+* Your "Follower" object and gizmo.
+  
 ## Step 4 - Changing the camera angle
 
 Suppose we want to play the game in an tilted view rather than a top-down view. 
@@ -91,9 +95,14 @@ We can do this by using the defined `mouse.delta` action which is provided the c
 
 1. Experiment with changing the camera follow to follow different points in the scene, e.g. the crosshair or the target. How does this affect the behavioural of the controls.
 
-2. Extend the follower class to take two targets and follow a point some proportion of the way between them. 
+2. Extend the follower class to take two targets and follow a point some proportion of the way between them.
 
-## Step 7 - Less strict tracking
+## To receive full-marks for today, show your demonstrator:
+* Your QA scenes for scenes for changing the camera angle.
+* Your crosshair not moving when the camera moves.
+* Your changed camera target.
+
+## Step 7 (Bonus) - Less strict tracking
 
 Suppose we want to allow the target some freedom of movement while keeping it roughly in the centre of the screen. Let's say we will allow the target to stay in a box 50% of the width and height of the screen, as shown in the diagram below.
 
